@@ -34,24 +34,26 @@ def tweet_sun_images():
     try:
         now = datetime.now()
         time_ran = now.strftime("%-I:%M %p")
+        d = now.strftime("%Y-%m-%d")
         os.makedirs(animation_dir, exist_ok=True)
 
         listing = [
-                  (f"Here are the latest images from our #Sun on {now}! This movie cycles through the latest images each highlighting a wavelength. Individual movies in replies!\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_fade.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 94 Angstrom wavelength. As per #NASA, this highlights regions of the corona during a solar flare.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0094.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 131 Angstrom wavelength. As per #NASA, this highlights hottest material in a flare.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0131.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 171 Angstrom wavelength. As per #NASA, this highlights the sun's atmosphere, or corona, when quiet. It also shows giant magnetic arcs known as coronal loops.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0171.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 193 Angstrom wavelength. As per #NASA, this highlights a slightly hotter region of the corona and also the much hotter material of a solar flare.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0193.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 211 Angstrom wavelength. As per #NASA, this highlights shows the hotter, magnetically active regions in the sun's corona.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0211.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 304 Angstrom wavelength. As per #NASA, this highlights light that is emitted from the chromosphere and transition region.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0304.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 335 Angstrom wavelength. As per #NASA, this highlights, like 211, shows hotter, magnetically active regions in the corona.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0335.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 1600 Angstrom wavelength. As per #NASA, this highlights a mixture of the upper photosphere, the transition region between the chromosphere, and the corona.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_1600.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 1700 Angstrom wavelength. As per #NASA, this highlights the surface of the sun and the chromosphere, which lies just above the photosphere.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_1700.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 94, 193, and 335 Angstrom wavelengths.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_094335193.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 171, 193, and 211 Angstrom wavelengths.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_211193171.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the 171, 211, and 304 Angstrom wavelengths.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_304211171.mp4"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the #LASCO C2 #Coronagraph.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sohowww.nascom.nasa.gov/data/LATEST/current_c2.gif"),
-                  (f"Here are the latest images from our #Sun on {now}! This movie highlights the #LASCO C3 #Coronagraph.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sohowww.nascom.nasa.gov/data/LATEST/current_c3.gif")]
+                  (f"Here are the latest images from our #Sun on {d}! This movie cycles through the latest images each highlighting a wavelength. Individual movies in replies!\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_fade.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 94 Angstrom wavelength. As per #NASA, this highlights regions of the corona during a solar flare.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0094.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 131 Angstrom wavelength. As per #NASA, this highlights hottest material in a flare.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0131.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 171 Angstrom wavelength. As per #NASA, this highlights the sun's atmosphere, or corona, when quiet. It also shows giant magnetic arcs known as coronal loops.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0171.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 193 Angstrom wavelength. As per #NASA, this highlights a slightly hotter region of the corona and also the much hotter material of a solar flare.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0193.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 211 Angstrom wavelength. As per #NASA, this highlights shows the hotter, magnetically active regions in the sun's corona.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0211.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 304 Angstrom wavelength. As per #NASA, this highlights light that is emitted from the chromosphere and transition region.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0304.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 335 Angstrom wavelength. As per #NASA, this highlights, like 211, shows hotter, magnetically active regions in the corona.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0335.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 1600 Angstrom wavelength. As per #NASA, this highlights a mixture of the upper photosphere, the transition region between the chromosphere, and the corona.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_1600.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 1700 Angstrom wavelength. As per #NASA, this highlights the surface of the sun and the chromosphere, which lies just above the photosphere.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_1700.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 94, 193, and 335 Angstrom wavelengths.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_094335193.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 171, 193, and 211 Angstrom wavelengths.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_211193171.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the 171, 211, and 304 Angstrom wavelengths.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_304211171.mp4"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the #LASCO C2 #Coronagraph.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sohowww.nascom.nasa.gov/data/LATEST/current_c2.gif"),
+                  (f"Here are the latest images from our #Sun on {d}! This movie highlights the #LASCO C3 #Coronagraph.\nCredits: #NASA #ESA #SOHO #SDO #SWPC", "https://sohowww.nascom.nasa.gov/data/LATEST/current_c3.gif")
+                  ]
 
         previous_id = None
 
@@ -64,14 +66,40 @@ def tweet_sun_images():
                 urlretrieve(url, save_path)
 
                 if (os.path.exists(save_path) == True):
-                    # Tweet Image
-                    previous_id = tweet(tweet_text, image_path=save_path, in_reply_to_status_id=previous_id, enable_tweet=True)
+                    # Check if gif and if so convert
+                    if (".gif" in save_path):
+                        save_path = _convert_gif_to_mp4(save_path)
+                        
+                        if (save_path == None):
+                            print(f"Could not convert and tweet {filename}")
+                            continue
 
-                    os.remove(save_path)
+                    # Tweet Image
+                    try:
+                        previous_id = tweet(tweet_text, image_path=save_path, in_reply_to_status_id=previous_id, enable_tweet=True)
+                    except Exception as e:
+                        print(f"Failed Tweeting: {filename} " + str(e))
                 else:
-                    print(f"Failed Downloading: {filename}" )
-            except:
-                print(f"Failed Tweeting: {filename}" )
+                    print(f"Failed Downloading: {filename}")
+
+                os.remove(save_path)
+
+            except Exception as e:
+                print(f"Failed Tweeting: {filename} " + str(e))
 
     except Exception as e:
         print(f"Failed Run: {time_ran}\n" + str(e))
+
+def _convert_gif_to_mp4(input_filename):
+    """ Converts file to mp4 """
+    output_filename = input_filename[:-3] + "mp4"
+    os.system(f"ffmpeg  -y -hide_banner -loglevel error -i {input_filename} -movflags faststart -pix_fmt yuv420p -vf \"scale=trunc(iw/2)*2:trunc(ih/2)*2\" {output_filename}")
+
+    if (os.path.exists(output_filename) == True):
+        os.remove(input_filename)
+        return output_filename
+    else:
+        return None
+
+if __name__ == "__main__":
+    tweet_sun_images()
