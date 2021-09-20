@@ -30,9 +30,6 @@ if __name__ == "__main__":
     # Set an event to schedule the day
     schedule.every().day.at("14:30").do(tweet_sun_images)
 
-    # Run the scheduler now in case script is run in middle of day.
-    schedule.run_all()
-
     while True:
         schedule.run_pending()
         sleep(1)

@@ -78,17 +78,19 @@ def tweet_sun_images():
                     try:
                         previous_id = tweet(tweet_text, image_path=save_path, in_reply_to_status_id=previous_id, enable_tweet=True)
                     except Exception as e:
-                        print(f"Failed Tweeting: {filename} " + str(e))
+                        print(f"Failed Tweeting: {filename}\n" + str(e))
                 else:
                     print(f"Failed Downloading: {filename}")
 
                 os.remove(save_path)
 
             except Exception as e:
-                print(f"Failed Tweeting: {filename} " + str(e))
+                print(f"Failed Tweeting: {filename}\n" + str(e))
 
     except Exception as e:
         print(f"Failed Run: {time_ran}\n" + str(e))
+
+    print(f"Run Succeeded: {time_ran}")
 
 def _convert_gif_to_mp4(input_filename):
     """ Converts file to mp4 """
